@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2023-10-23T12:19:27.137Z",
+    "end": "2023-10-23T12:19:28.132Z",
+    "duration": 995
+  },
+  "results": [
+    {
+      "uuid": "5859399b-0d28-409c-9d50-e47df3c345ce",
+      "title": "",
+      "fullFile": "cypress/e2e/firstTest.spec.js",
+      "file": "cypress/e2e/firstTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "956129d7-869e-4ce4-b6b5-9195089b44ad",
+          "title": "CounterApp",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should increment the counter when the +1 button is clicked",
+              "fullTitle": "CounterApp should increment the counter when the +1 button is clicked",
+              "timedOut": null,
+              "duration": 273,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/\");\ncy.get(\"h2\").should(\"contain\", \" 10 \");\ncy.get(\"button\").contains(\"+1\").click();\ncy.get(\"h2\").should(\"contain\", \" 11 \");",
+              "err": {},
+              "uuid": "f83e1f1e-8892-489e-985a-6ca022ef2b66",
+              "parentUUID": "956129d7-869e-4ce4-b6b5-9195089b44ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should decrement the counter when the -1 button is clicked",
+              "fullTitle": "CounterApp should decrement the counter when the -1 button is clicked",
+              "timedOut": null,
+              "duration": 125,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/\");\ncy.get(\"h2\").should(\"contain\", \" 10 \");\ncy.get(\"button\").contains(\"-1\").click();\ncy.get(\"h2\").should(\"contain\", \" 9 \");",
+              "err": {},
+              "uuid": "a1f5ec36-6607-47e2-a65f-78af427c0631",
+              "parentUUID": "956129d7-869e-4ce4-b6b5-9195089b44ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should reset the counter when the \"Reset\" button is clicked",
+              "fullTitle": "CounterApp should reset the counter when the \"Reset\" button is clicked",
+              "timedOut": null,
+              "duration": 210,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/\");\ncy.get(\"h2\").should(\"have.text\", \" 10 \");\ncy.get(\"button\").contains(\"Reset\").click();\ncy.get(\"h2\").should(\"have.text\", \" 10 \");\nCypress._.times(3, () => {\n  cy.get(\"button\").contains(\"+1\").invoke(\"click\");\n});\ncy.get(\"h2\").should(\"have.text\", \" 13 \");\ncy.get(\"button\").contains(\"Reset\").click();\ncy.get(\"h2\").should(\"have.text\", \" 10 \");",
+              "err": {},
+              "uuid": "a7eea03f-33c8-4dc6-9d63-dcb5904cc06c",
+              "parentUUID": "956129d7-869e-4ce4-b6b5-9195089b44ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should have a negative value of the counter by clicking the '-1' button more than 10 times",
+              "fullTitle": "CounterApp should have a negative value of the counter by clicking the '-1' button more than 10 times",
+              "timedOut": null,
+              "duration": 79,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/\");\ncy.get(\"h2\").should(\"have.text\", \" 10 \");\nCypress._.times(15, () => {\n  cy.get(\"button\").contains(\"-1\").invoke(\"click\");\n});\ncy.get(\"h2\").should(\"have.text\", \" -5 \");",
+              "err": {},
+              "uuid": "58755451-1885-4cb0-b401-84db3f2f396a",
+              "parentUUID": "956129d7-869e-4ce4-b6b5-9195089b44ad",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should increment the counter by clicking the '+1' button to reach a 3-digit number",
+              "fullTitle": "CounterApp should increment the counter by clicking the '+1' button to reach a 3-digit number",
+              "timedOut": null,
+              "duration": 228,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"/\");\ncy.get(\"h2\").should(\"have.text\", \" 10 \");\nCypress._.times(100, () => {\n  cy.get(\"button\").contains(\"+1\").invoke(\"click\");\n});\ncy.get(\"h2\").should(\"have.text\", \" 110 \");",
+              "err": {},
+              "uuid": "c02f2d8d-f550-4724-b577-86db31c264e4",
+              "parentUUID": "956129d7-869e-4ce4-b6b5-9195089b44ad",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f83e1f1e-8892-489e-985a-6ca022ef2b66",
+            "a1f5ec36-6607-47e2-a65f-78af427c0631",
+            "a7eea03f-33c8-4dc6-9d63-dcb5904cc06c",
+            "58755451-1885-4cb0-b401-84db3f2f396a",
+            "c02f2d8d-f550-4724-b577-86db31c264e4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 915,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

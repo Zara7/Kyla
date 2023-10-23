@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.995" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-10-23T12:19:27" tests="0" file="cypress/e2e/firstTest.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="CounterApp" timestamp="2023-10-23T12:19:27" tests="5" time="0.992" failures="0">
+    <testcase name="CounterApp should increment the counter when the +1 button is clicked" time="0.273" classname="should increment the counter when the +1 button is clicked">
+    </testcase>
+    <testcase name="CounterApp should decrement the counter when the -1 button is clicked" time="0.125" classname="should decrement the counter when the -1 button is clicked">
+    </testcase>
+    <testcase name="CounterApp should reset the counter when the &quot;Reset&quot; button is clicked" time="0.210" classname="should reset the counter when the &quot;Reset&quot; button is clicked">
+    </testcase>
+    <testcase name="CounterApp should have a negative value of the counter by clicking the &apos;-1&apos; button more than 10 times" time="0.079" classname="should have a negative value of the counter by clicking the &apos;-1&apos; button more than 10 times">
+    </testcase>
+    <testcase name="CounterApp should increment the counter by clicking the &apos;+1&apos; button to reach a 3-digit number" time="0.228" classname="should increment the counter by clicking the &apos;+1&apos; button to reach a 3-digit number">
+    </testcase>
+  </testsuite>
+</testsuites>
